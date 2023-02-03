@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="" />
+    <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Data_Science/data/Koweps_Codebook_2019.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Science/welfare.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Science/welfare.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/davidkim/PycharmProjects/pythonProject/DS_Example/Data_Science/data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,6 +47,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Data_Science/data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Data_Science/data" />
     </key>
@@ -54,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675431780637</updated>
-      <workItem from="1675431781716" duration="6061000" />
+      <workItem from="1675431781716" duration="12270000" />
     </task>
     <servers />
   </component>
@@ -64,6 +72,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DS_Example$test.coverage" NAME="test Coverage Results" MODIFIED="1675434800363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
     <SUITE FILE_PATH="coverage/DS_Example$income.coverage" NAME="income Coverage Results" MODIFIED="1675436406481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
-    <SUITE FILE_PATH="coverage/DS_Example$welfare.coverage" NAME="welfare Coverage Results" MODIFIED="1675436879319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
+    <SUITE FILE_PATH="coverage/DS_Example$welfare.coverage" NAME="welfare Coverage Results" MODIFIED="1675444608249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
   </component>
 </project>
