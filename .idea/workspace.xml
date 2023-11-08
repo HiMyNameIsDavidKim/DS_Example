@@ -5,15 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data_Science/comment_bts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/data/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/data/economics.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/data/mpg.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/data/mtcars.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/data/news_comment_BTS.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/data/speech_moon.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/speech_moon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Science/stat_exam.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/davidkim/PycharmProjects/pythonProject/DS_Example/Data_Science/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/davidkim/PycharmProjects/pythonProject/DS_Example&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,7 +65,15 @@
       <updated>1675431780637</updated>
       <workItem from="1675431781716" duration="12355000" />
       <workItem from="1675493429877" duration="317000" />
-      <workItem from="1675493754824" duration="7799000" />
+      <workItem from="1675493754824" duration="8790000" />
+      <workItem from="1675660339974" duration="1565000" />
+      <workItem from="1675733476114" duration="2054000" />
+      <workItem from="1677571164611" duration="932000" />
+      <workItem from="1677722248131" duration="9000" />
+      <workItem from="1684122648047" duration="508000" />
+      <workItem from="1684123240164" duration="4234000" />
+      <workItem from="1696045830445" duration="3692000" />
+      <workItem from="1699364820589" duration="676000" />
     </task>
     <servers />
   </component>
@@ -86,9 +85,9 @@
     <SUITE FILE_PATH="coverage/DS_Example$fuel_eff.coverage" NAME="fuel_eff Coverage Results" MODIFIED="1675501155989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
     <SUITE FILE_PATH="coverage/DS_Example$speech.coverage" NAME="speech Coverage Results" MODIFIED="1675496245931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
     <SUITE FILE_PATH="coverage/DS_Example$comment_bts.coverage" NAME="comment_bts Coverage Results" MODIFIED="1675498182453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
-    <SUITE FILE_PATH="coverage/DS_Example$stat_exam.coverage" NAME="stat_exam Coverage Results" MODIFIED="1675501292630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
+    <SUITE FILE_PATH="coverage/DS_Example$stat_exam.coverage" NAME="stat_exam Coverage Results" MODIFIED="1684124284097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
     <SUITE FILE_PATH="coverage/DS_Example$test.coverage" NAME="test Coverage Results" MODIFIED="1675434800363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
     <SUITE FILE_PATH="coverage/DS_Example$income.coverage" NAME="income Coverage Results" MODIFIED="1675436406481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
-    <SUITE FILE_PATH="coverage/DS_Example$welfare.coverage" NAME="welfare Coverage Results" MODIFIED="1675444608249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
+    <SUITE FILE_PATH="coverage/DS_Example$welfare.coverage" NAME="welfare Coverage Results" MODIFIED="1684122673895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
   </component>
 </project>
