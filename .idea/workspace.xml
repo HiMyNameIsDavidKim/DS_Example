@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Data_Science/lecture_ai_research/fashion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +75,9 @@
       <workItem from="1684123240164" duration="4234000" />
       <workItem from="1696045830445" duration="3692000" />
       <workItem from="1699364820589" duration="676000" />
+      <workItem from="1699410421124" duration="1080000" />
+      <workItem from="1699414409644" duration="33000" />
+      <workItem from="1700041834964" duration="2191000" />
     </task>
     <servers />
   </component>
@@ -89,5 +93,6 @@
     <SUITE FILE_PATH="coverage/DS_Example$test.coverage" NAME="test Coverage Results" MODIFIED="1675434800363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
     <SUITE FILE_PATH="coverage/DS_Example$income.coverage" NAME="income Coverage Results" MODIFIED="1675436406481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
     <SUITE FILE_PATH="coverage/DS_Example$welfare.coverage" NAME="welfare Coverage Results" MODIFIED="1684122673895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science" />
+    <SUITE FILE_PATH="coverage/DS_Example$fashion.coverage" NAME="fashion Coverage Results" MODIFIED="1700043671696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data_Science/lecture_ai_research" />
   </component>
 </project>
