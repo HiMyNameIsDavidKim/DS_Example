@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data_Science/lecture_ai_research/fashion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +74,7 @@
       <workItem from="1699364820589" duration="676000" />
       <workItem from="1699410421124" duration="1080000" />
       <workItem from="1699414409644" duration="33000" />
-      <workItem from="1700041834964" duration="2191000" />
+      <workItem from="1700041834964" duration="2415000" />
     </task>
     <servers />
   </component>
