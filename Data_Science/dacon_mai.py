@@ -5,6 +5,7 @@ import os
 import re
 import glob
 import cv2
+import timm
 
 import torch
 import torch.nn as nn
@@ -44,9 +45,9 @@ def seed_everything(seed):
 
 seed_everything(CFG['SEED'])  # Seed 고정
 
-train_path = './data/dacon_mai/train.csv'
-test_path = './data/dacon_mai/test.csv'
-model_path = './data/dacon_mai/model.pt'
+train_path = 'data/dacon_mai/train.csv'
+test_path = 'data/dacon_mai/test.csv'
+model_path = 'data/dacon_mai/model.pt'
 df = pd.read_csv(train_path)
 train_len = int(len(df) * 0.8)
 train_df = df.iloc[:train_len]
@@ -54,7 +55,6 @@ val_df = df.iloc[train_len:]
 train_label_vec = train_df.iloc[:, 2:].values.astype(np.float32)
 val_label_vec = val_df.iloc[:, 2:].values.astype(np.float32)
 CFG['label_size'] = train_label_vec.shape[1]
-
 
 class CustomDataset(Dataset):
     def __init__(self, img_path_list, label_list, transforms=None):
@@ -80,8 +80,23 @@ class CustomDataset(Dataset):
         return len(self.img_path_list)
 
 
+'''
+"MultiplicativeNoise",
+"FancyPCA",
+"Sharpen",
+"Superpixels",
+'''
+
 train_transform = A.Compose([
-    A.Resize(CFG['IMG_SIZE'], CFG['IMG_SIZE']),
+    A.Resize(256, 256),
+    A.RandomCrop(CFG['IMG_SIZE'], CFG['IMG_SIZE']),
+    A.VerticalFlip(),
+    A.HorizontalFlip(),
+    # A.Sharpen(),
+    A.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2),
+    # A.MultiplicativeNoise(multiplier=(0.9, 1.1), per_channel=True),
+    # A.FancyPCA(alpha=0.1),
+    # A.Superpixels(),
     A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225), max_pixel_value=255.0, always_apply=False,
                 p=1.0),
     ToTensorV2()
@@ -99,15 +114,22 @@ val_loader = DataLoader(val_dataset, batch_size=CFG['BATCH_SIZE'], shuffle=False
 
 
 # Model
-class BaseModel(nn.Module):
+class GeneEx(nn.Module):
     def __init__(self, gene_size=CFG['label_size']):
-        super(BaseModel, self).__init__()
-        self.backbone = models.resnet50(pretrained=True)
-        self.regressor = nn.Linear(1000, gene_size)
+        super(GeneEx, self).__init__()
+        # self.backbone = models.resnet50(pretrained=True)
+        self.backbone = timm.create_model('vit_base_patch16_224', pretrained=True, num_classes=0)
+        for param in self.backbone.parameters():
+            param.requires_grad = False
+        self.fc1 = nn.Linear(768, 1000)
+        self.fc2 = nn.Linear(1000, 1000)
+        self.fc3 = nn.Linear(1000, gene_size)
 
     def forward(self, x):
         x = self.backbone(x)
-        x = self.regressor(x)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
         return x
 
 
@@ -119,11 +141,12 @@ def train(model, optimizer, train_loader, val_loader, scheduler, device):
     best_loss = 99999999
     best_model = None
 
+    train_loss = []
+    val_loss = []
     for epoch in range(1, CFG['EPOCHS'] + 1):
         model.train()
-        train_loss = []
-        val_loss = []
-        for imgs, labels in tqdm(iter(train_loader)):
+        running_loss = 0.
+        for i, (imgs, labels) in tqdm(enumerate(train_loader, 0), total=len(train_loader)):
             imgs = imgs.float().to(device)
             labels = labels.to(device)
 
@@ -136,11 +159,17 @@ def train(model, optimizer, train_loader, val_loader, scheduler, device):
             optimizer.step()
 
             train_loss.append(loss.item())
+            running_loss += loss.item()
+
+            inter = 10
+            if i % inter == inter - 1:
+                print(f'Epoch [{epoch}], Train Loss : [{running_loss / inter:.4f}]')
+                running_loss = 0.
 
         _val_loss = validation(model, criterion, val_loader, device)
         val_loss.append(_val_loss)
         _train_loss = np.mean(train_loss)
-        print(f'Epoch [{epoch}], Train Loss : [{_train_loss:.5f}] Val Loss : [{_val_loss:.5f}]')
+        print(f'Epoch [{epoch}], Train Loss : [{_train_loss:.4f}] Val Loss : [{_val_loss:.4f}]')
         save_model(model, epoch, train_loss, val_loss, model_path)
 
         if scheduler is not None:
@@ -186,7 +215,7 @@ def save_model(model, epoch, train_loss, val_loss, model_path):
     print(f"****** Model checkpoint saved at epochs {epoch} ******")
 
 
-model = BaseModel()
+model = GeneEx()
 model.eval()
 optimizer = torch.optim.Adam(params=model.parameters(), lr=CFG["LEARNING_RATE"])
 scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=2,
