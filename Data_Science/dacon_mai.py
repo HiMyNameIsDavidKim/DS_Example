@@ -115,15 +115,16 @@ val_loader = DataLoader(val_dataset, batch_size=CFG['BATCH_SIZE'], shuffle=False
 
 # Model
 class GeneEx(nn.Module):
-    def __init__(self, gene_size=CFG['label_size']):
+    def __init__(self, gene_size=CFG['label_size'], dim=4096):
         super(GeneEx, self).__init__()
         # self.backbone = models.resnet50(pretrained=True)
         self.backbone = timm.create_model('vit_base_patch16_224', pretrained=True, num_classes=0)
         for param in self.backbone.parameters():
             param.requires_grad = False
-        self.fc1 = nn.Linear(768, 1000)
-        self.fc2 = nn.Linear(1000, 1000)
-        self.fc3 = nn.Linear(1000, gene_size)
+        self.dim = dim
+        self.fc1 = nn.Linear(768, self.dim)
+        self.fc2 = nn.Linear(self.dim, self.dim)
+        self.fc3 = nn.Linear(self.dim, gene_size)
 
     def forward(self, x):
         x = self.backbone(x)
@@ -175,11 +176,7 @@ def train(model, optimizer, train_loader, val_loader, scheduler, device):
         if scheduler is not None:
             scheduler.step(_val_loss)
 
-        if best_loss > _val_loss:
-            best_loss = _val_loss
-            best_model = model
-
-    return best_model
+    return model
 
 
 # Val

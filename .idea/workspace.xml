@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_Science/dacon_mai.py" beforeDir="false" />
-    </list>
+    <list default="true" id="f6c9f317-2dba-4820-bc18-bb9f37410a0c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,8 +51,8 @@
       <recent name="$PROJECT_DIR$/Data_Science/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Data_Science/data/dacon_mai" />
       <recent name="$PROJECT_DIR$/Data_Science" />
+      <recent name="$PROJECT_DIR$/Data_Science/data/dacon_mai" />
       <recent name="$PROJECT_DIR$/Data_Science/data" />
     </key>
   </component>
@@ -85,7 +82,7 @@
       <workItem from="1729566000814" duration="5895000" />
       <workItem from="1729578498494" duration="2241000" />
       <workItem from="1729731820982" duration="2383000" />
-      <workItem from="1730079677124" duration="4139000" />
+      <workItem from="1730079677124" duration="4559000" />
     </task>
     <servers />
   </component>
