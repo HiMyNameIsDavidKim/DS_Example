@@ -90,13 +90,23 @@ class CustomDataset(Dataset):
 train_transform = A.Compose([
     A.Resize(256, 256),
     A.RandomCrop(CFG['IMG_SIZE'], CFG['IMG_SIZE']),
+    A.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2),
     A.VerticalFlip(),
     A.HorizontalFlip(),
+
+    # A.RandomSnow(),
+    # A.RandomRain(),
+    # A.RandomFog(),
+    # A.RandomShadow(),
+    # A.RandomToneCurve(),
+    # A.RandomBrightnessContrast(),
+    # A.GaussNoise(),
+    # A.ISONoise(),
+    # A.RandomGamma(),
     # A.Sharpen(),
-    A.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2),
     # A.MultiplicativeNoise(multiplier=(0.9, 1.1), per_channel=True),
     # A.FancyPCA(alpha=0.1),
-    # A.Superpixels(),
+
     A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225), max_pixel_value=255.0, always_apply=False,
                 p=1.0),
     ToTensorV2()
