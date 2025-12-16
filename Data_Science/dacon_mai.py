@@ -186,6 +186,10 @@ def train(model, optimizer, train_loader, val_loader, scheduler, device):
         if scheduler is not None:
             scheduler.step(_val_loss)
 
+        # if best_loss > _val_loss:
+        #     best_loss = _val_loss
+        #     best_model = model
+
     return model
 
 
